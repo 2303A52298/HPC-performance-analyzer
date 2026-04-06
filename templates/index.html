@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>HPC Analyzer Dashboard</title>
+<title>HPC Performance Dashboard</title>
 
 <link rel="stylesheet" href="/static/style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -14,7 +14,7 @@
 
 <header>
 <h1>⚡ HPC Performance Dashboard</h1>
-<p>Real-time analysis of Serial, Parallel & Distributed Computing</p>
+<p>Analyze Serial, Parallel & Distributed Computing</p>
 </header>
 
 <div class="controls">
@@ -22,20 +22,28 @@
 <button onclick="runTest()">Run Analysis</button>
 </div>
 
+<!-- Loader -->
+<div id="loader" style="display:none;">
+    <p>⏳ Running Analysis...</p>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+</div>
+
 <div class="cards">
 
 <div class="card">
-<h3>Serial Time</h3>
+<h3>Serial</h3>
 <p id="serial">0</p>
 </div>
 
 <div class="card">
-<h3>Parallel Time</h3>
+<h3>Parallel</h3>
 <p id="parallel">0</p>
 </div>
 
 <div class="card">
-<h3>Distributed Time</h3>
+<h3>Distributed</h3>
 <p id="distributed">0</p>
 </div>
 
@@ -54,7 +62,7 @@
 <div class="charts">
 
 <div class="chartBox">
-<h3>Execution Time Comparison</h3>
+<h3>Execution Time</h3>
 <canvas id="mainChart"></canvas>
 </div>
 
