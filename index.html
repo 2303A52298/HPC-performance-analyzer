@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>HPC Performance Analyzer</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h1>⚡ HPC Parallel Performance Analyzer</h1>
+
+<p class="sub">
+Compare Serial, Parallel and Distributed Execution Performance
+</p>
+
+<button onclick="runAlgorithm()">Run Algorithm</button>
+
+<div class="cards">
+
+<div class="card">
+<h3>Serial Execution</h3>
+<p id="serial">0</p>
+</div>
+
+<div class="card">
+<h3>Parallel Execution</h3>
+<p id="parallel">0</p>
+</div>
+
+<div class="card">
+<h3>Distributed Execution</h3>
+<p id="distributed">0</p>
+</div>
+
+</div>
+
+<div class="chartBox">
+
+<canvas id="chart"></canvas>
+
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
