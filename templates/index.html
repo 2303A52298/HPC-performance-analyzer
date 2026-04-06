@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-<title>HPC Performance Analyzer</title>
+<title>HPC Analyzer Dashboard</title>
 
 <link rel="stylesheet" href="/static/style.css">
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body>
 
-<h1>High Performance Computing Analyzer</h1>
+<div class="dashboard">
 
-<div class="box">
+<header>
+<h1>⚡ HPC Performance Dashboard</h1>
+<p>Real-time analysis of Serial, Parallel & Distributed Computing</p>
+</header>
 
-<input type="number" id="size" placeholder="Enter data size">
+<div class="controls">
+<input type="number" id="size" placeholder="Enter dataset size">
+<button onclick="runTest()">Run Analysis</button>
+</div>
 
-<button onclick="runTest()">Run Test</button>
+<div class="cards">
+
+<div class="card">
+<h3>Serial Time</h3>
+<p id="serial">0</p>
+</div>
+
+<div class="card">
+<h3>Parallel Time</h3>
+<p id="parallel">0</p>
+</div>
+
+<div class="card">
+<h3>Distributed Time</h3>
+<p id="distributed">0</p>
+</div>
+
+<div class="card highlight">
+<h3>Speedup</h3>
+<p id="speedup">0</p>
+</div>
+
+<div class="card highlight">
+<h3>Efficiency</h3>
+<p id="efficiency">0</p>
+</div>
 
 </div>
 
-<canvas id="chart"></canvas>
+<div class="charts">
+
+<div class="chartBox">
+<h3>Execution Time Comparison</h3>
+<canvas id="mainChart"></canvas>
+</div>
+
+<div class="chartBox">
+<h3>Performance Metrics</h3>
+<canvas id="metricChart"></canvas>
+</div>
+
+</div>
+
+</div>
 
 <script src="/static/script.js"></script>
 
 </body>
-
 </html>
